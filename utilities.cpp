@@ -95,10 +95,10 @@ bool is_in_sphere_2d(Pixel3d *pixel, Sphere *sphere)
     int x_diff = abs(pixel->get_x() - sphere->get_x_origin());
     int y_diff = abs(pixel->get_y() - sphere->get_y_origin());
 
-    return (double) (get_square(x_diff) + 
-                     get_square(y_diff))  
-                   < get_square(sphere->get_radius()) - DOUBLE_COMPARISON_PRECISION ?
-                    true : false;
+    return (get_square(x_diff) + 
+            get_square(y_diff))  
+          < get_square(sphere->get_radius()) - DOUBLE_COMPARISON_PRECISION ?
+            true : false;
 }
 
 int get_sphere_point_z_coord(Sphere *sphere, int x_pos, int y_pos)

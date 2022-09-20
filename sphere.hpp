@@ -15,7 +15,7 @@
 #include "lightsource.hpp"
 
 
-const size_t SPECULAR_DEG = 11;
+const size_t SPECULAR_DEG = 3;
 
 
 class Sphere
@@ -97,7 +97,7 @@ public:
         color_ = color;
     }
 
-    void draw(Image *image, LightSource *light_source, Pixel3d *camera);
+    void draw(Image *image, LightSource *light_source, Color *ambient_light, Pixel3d *camera);
 };
 
 
