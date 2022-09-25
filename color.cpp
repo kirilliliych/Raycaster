@@ -1,6 +1,7 @@
 #include "color.hpp"
 #include "utilities.hpp"
 
+
 Color::Color()
   : red_d_  (1),
     green_d_(1),
@@ -41,4 +42,14 @@ Color::Color(double r, double g, double b, double a)
     alpha_d_ = max(alpha_d_, (double) 0);
 
     update_ints();
+}
+
+Color::Color(unsigned rgba)
+{
+    color_.r = (uint8_t) ((rgba & 0xFF000000) >> 24);
+    color_.g = (uint8_t) ((rgba & 0x00FF0000) >> 16);
+    color_.b = (uint8_t) ((rgba & 0x0000FF00) >> 8);
+    color_.a = (uint8_t)  (rgba & 0x000000FF);
+
+    update_doubles();
 }

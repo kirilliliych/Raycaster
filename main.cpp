@@ -12,21 +12,24 @@ int main()
     DisplayWindow window{window_width, window_height, "Raycaster"};
 
     Sphere ball{400, 400, 0, 150};
-    Color ball_color{(uint8_t) 0x32, (uint8_t) 0xCD, (uint8_t) 0x32};
+    Color ball_color{LIME};
     ball.set_color(ball_color);
 
     LightSource light_source{};
-    light_source.position_.set_pixel3d(400, 400, 700);
-    light_source.color_.set_color(0xFFFF32FF);
+    // light_source.position_.set_pixel3d(200, 200, 300);
+    light_source.color_.set_color(WHITE);
 
-    Color ambient_light{0.01, 0.01, 0.01};
+    Color ambient_light{0.2, 0.2, 0.2};
 
-    Pixel3d camera_position{400, 400, 900};
+    Pixel3d camera_position{400, 400, 600};
+
+    double light_source_rotating_parameter = 0;
 
     window.open();
     while (window.is_open())
     {
-        Color image_background_color{(uint8_t) 0xFF, (uint8_t) 0xFF, (uint8_t) 0xFF};
+        light_source.position_.set_pixel3d(300 + 300 * sin(light_source_rotating_parameter), 300 + 300 * sin(light_source_rotating_parameter), 300 + sin(light_source_rotating_parameter));
+        Color image_background_color{WHITE};
         Image sphere_image{};
         sphere_image.create(window_width, window_height, &image_background_color);
 
@@ -40,6 +43,8 @@ int main()
         window.draw_image(&sphere_image, &sphere_picture_origin);
 
         window.display();
+
+        light_source_rotating_parameter += 0.05;
     }
     
     return 0;

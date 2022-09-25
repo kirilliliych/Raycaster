@@ -15,7 +15,7 @@
 #include "lightsource.hpp"
 
 
-const size_t SPECULAR_DEG = 3;
+const size_t SPECULAR_DEG = 11;
 
 
 class Sphere

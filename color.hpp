@@ -9,6 +9,7 @@
 #include <iostream>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
+#include "colorlibrary.hpp"
 
 
 const uint8_t COLOR_MAX_VALUE = 0xFF;
@@ -92,6 +93,8 @@ public:
     Color(uint8_t r, uint8_t g, uint8_t b, uint8_t a = (uint8_t) 0xFF);
 
     Color(double r, double g, double b, double a = 1);
+
+    Color(unsigned rgba);
 
     uint8_t get_r()
     {
@@ -241,6 +244,7 @@ public:
         result += another_color;
 
         result.limit_doubles();
+        result.update_ints();
 
         return result;
     }
@@ -252,6 +256,7 @@ public:
         result *= another_color;
 
         result.limit_doubles();
+        result.update_ints();
 
         return result;
     }
@@ -263,6 +268,7 @@ public:
         result *= scalar;
 
         result.limit_doubles();
+        result.update_ints();
 
         return result;
     }

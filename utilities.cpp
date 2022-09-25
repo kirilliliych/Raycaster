@@ -30,7 +30,7 @@ void multiply_vector(Vector3d *vector, double multiplier)
 
     vector->set_x(vector->get_x() * multiplier);
     vector->set_y(vector->get_y() * multiplier);
-    vector->set_x(vector->get_z() * multiplier);
+    vector->set_z(vector->get_z() * multiplier);
 }
 
 double get_vector_length_square(Vector3d *vector)
