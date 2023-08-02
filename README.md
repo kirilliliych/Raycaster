@@ -15,7 +15,7 @@ to implement. Despite this, the final picture is quite pleasing to the eye!
 ## How to launch
 ```c++
    $ git clone https://github.com/kirilliliych/Raycaster.git
-   make
+   $ make
 ```
 
 ***
