@@ -29,8 +29,8 @@ to implement. Despite this, the final picture is quite pleasing to the eye!
 I explicitly welcome any outside contributors. Use my mail: _ilichev.kv@phystech.edu_.
 
 __A strong request__:
-* Do not break the codestyle
-* Do not destroy previous functionality with additions
+- Do not break the codestyle
+- Do not destroy previous functionality with additions
 
 ***
 ## Where to ask questions
