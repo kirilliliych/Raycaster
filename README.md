@@ -20,6 +20,9 @@ to implement. Despite this, the final picture is quite pleasing to the eye!
 
 ***
 ## Screenshots
+![pic1](readme_pictures/pic1.png)
+![pic2](readme_pictures/pic2.png)
+![pic3](readme_pictures/pic3.png)
 
 ***
 ## How can I help
